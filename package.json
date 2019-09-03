@@ -5,23 +5,21 @@
         "env": {
             "browser": true,
             "node": true
-        },
-        "main": "index.js",
-        "license": "MIT",
-        "scripts": {
-            "htmlhint": "htmlhint src/*.html test/*.html",
-            "eslint": "eslint --ext .js test/",
-            "pretest": "npm run eslint --silent && npm run htmlhint --silent",
-            "test": "jest --coverage"
-        },
-        "dependencies": {
-            "eslint": "^5.9.0",
-            "eslint-plugin-jest": "^22.1.2",
-            "htmlhint": "^0.10.1",
-            "jest": "^23.6.0"
-        },
-        "repository": {
-            "type": "git",
-            "url": "https://github.com/LedaHuerta/MEX008-FE-md-link.git"
         }
+    },
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "eslint": "eslint --ext .js test/",
+        "test": "jest --coverage"
+    },
+    "dependencies": {
+        "eslint": "^5.9.0",
+        "eslint-plugin-jest": "^22.1.2",
+        "jest": "^23.6.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LedaHuerta/MEX008-FE-md-link.git"
     }
+}

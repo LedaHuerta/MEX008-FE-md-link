@@ -1,10 +1,11 @@
-const mdLinks = require('../index.js');
+// const { mdLinks, readDirPromise } = require('../index');
+const readFile = require('../readFile');
 
-
-describe('mdLinks', () => {
+describe('readFile', () => {
 
     it('should be a function', () => {
-        expect(typeof mdLinks).toBe('function');
+        expect(typeof readFile).toBe('function');
+        expect(readFile).resolves.toBe(data);
+        expect(readFile).rejects.toBe(error);
     });
-
 });
