@@ -5,7 +5,10 @@ describe('readFile', () => {
 
     it('should be a function', () => {
         expect(typeof readFile).toBe('function');
-        expect(readFile).resolves.toBe(data);
-        expect(readFile).rejects.toBe(error);
+
+        //expect(readFile).rejects.toBe(error);
     });
+    it('should return a string', () => {
+        expect(readFile('./test/test.md')).resolves.toBe('Hola');
+    })
 });

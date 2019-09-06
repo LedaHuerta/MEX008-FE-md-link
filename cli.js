@@ -1,5 +1,4 @@
-const index = require('./index');
-const readDir = require('readDir');
+#!/usr/bin/env node
 
-
-console.log(readDir());
+//se declaraa la url
+const finalPath = process.argv[2] || null;

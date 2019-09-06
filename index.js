@@ -1,6 +1,8 @@
+// const markdownIt = require('markdown-it');
 const readFile = require('readFile');
-const path = require('path');
-const parseFile = require('parseFile')
+const parseFile = require('parseFile');
+const pathModule = require('path');
+
 
 
 const path = () => {
@@ -13,13 +15,14 @@ const path = () => {
     }
     // si encuentra el archivo:
     //Leer el archivo:
-    readFile(filePath);
-    .then((data) => {
+    readFile(filePath)
+        .then((data) => {
             //manejo de errores: el archivo esta vacio
             if (data === '') {
                 console.log('El archivo esta vacío');
                 return 'El archivo esta vacío';
             }
+            //enviar parametros a parseFile
             parseFile(data, filePath);
         })
         .catch((error) => {
