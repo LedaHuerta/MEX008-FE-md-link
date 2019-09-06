@@ -1,10 +1,14 @@
-const mdLinks = require('../');
+// const { mdLinks, readDirPromise } = require('../index');
+const readFile = require('../readFile');
 
+describe('readFile', () => {
 
-describe('mdLinks', () => {
+    it('should be a function', () => {
+        expect(typeof readFile).toBe('function');
 
-  it('should...', () => {
-    console.log('FIX ME!');
-  });
-
+        //expect(readFile).rejects.toBe(error);
+    });
+    it('should return a string', () => {
+        expect(readFile('./test/test.md')).resolves.toBe('Hola');
+    })
 });
